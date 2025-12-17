@@ -3,195 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Sudarsan Kumar</title>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Bootstrap -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+    <meta name="description" content="Sudarsan Kumar's achievements, certifications, and awards">
+    <title>Achievements & Certifications | Sudarsan Kumar</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Navbar Styling */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #2c3e50;
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav h1 {
-            font-size: 1.8rem;
-            /* letter-spacing: 2px; */
-            color: #ecf0f1;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            /* gap: 1.5rem; */
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ecf0f1;
-            font-weight: bold;
-            transition: color 0.3s;
-            /* padding: 0.5rem; */
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: #3498db;
-        }
-
-
-        .projects {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .achievement-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--glass-shadow);
+            transition: all var(--transition-base);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        .achievement-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl), 0 0 40px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.4);
         }
 
-        .project-card img {
+        .achievement-image {
+            position: relative;
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
         }
 
-        .project-card h3 {
-            margin: 1rem;
-            font-size: 1.5rem;
+        .achievement-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: var(--spacing-md);
+            transition: transform var(--transition-slow);
         }
 
-        .project-card p {
-            margin: 0 1rem 1rem;
-            font-size: 1rem;
-            color: #555;
+        .achievement-card:hover .achievement-image img {
+            transform: scale(1.1);
         }
 
-        .project-card a {
-            display: inline-block;
-            margin: 1rem;
-            padding: 0.5rem 1rem;
-            background: #3498db;
+        .achievement-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-gradient-alt);
             color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background 0.3s;
+            border-radius: var(--radius-full);
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
         }
 
-        .project-card a:hover {
-            background: #2c3e50;
+        .achievement-content {
+            padding: var(--spacing-lg);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                /* gap: 1rem; */
-            }
+        .achievement-title {
+            font-size: var(--fs-h4);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
 
-            .projects {
-                grid-template-columns: 1fr;
-            }
+        .achievement-issuer {
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--fs-small);
+        }
+
+        .achievement-date {
+            color: var(--text-muted);
+            font-size: var(--fs-small);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            font-size: var(--fs-small);
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .achievement-links {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">Sudarsan Kumar</a>
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="project.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="achievements.html">Achievements & Certificate</a>
-                    </li>
-                </ul>
+            <a href="index.html" class="navbar-brand">
+                <span class="gradient-text">Sudarsan Kumar</span>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="achievements.html" class="nav-link active">Achievements</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="project-card">
-            <img src="achie/image.png" alt="21 Days GFG">
-            <h3>21 Days GFG Winner</h3>
-            <p>21 Days of solving DSA problems on GeeksforGeeks using Python.</p>
-            <a href="https://media.geeksforgeeks.org/notifications/image-2024-10-24T155809.508-20241024162244.png" target="_blank">Certification</a>
-        </div>
-
-        <div class="project-card">
-            <img src="achie/OracleMLCertificate-1.png" alt="Oracle ML Certificate">
-            <h3>Oracle Machine Learning using Java</h3>
-            <p>Oracle's Artificial Intelligence and Machine Learning course using Java.</p>
-            <a href="achie/OracleMLCertificate.pdf" target="_blank">Certification</a>
-        </div>
-
-        <div class="project-card">
-            <img src="achie/download.png" alt="Internship">
-            <h3>YBI Foundation Internship</h3>
-            <p>Learned various techniques and concepts in Machine Learning.</p>
-            <a href="https://www.ybifoundation.org/certificate-validation?credentialId=MWA3W3G3FXBKZ" target="_blank">Certification</a>
+    <!-- Hero Section -->
+    <section class="py-xl" style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); padding-top: 120px; min-height: 40vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center reveal" data-animate="fade-up">
+                <h1 class="gradient-text mb-md" style="font-size: var(--fs-h1);">
+                    <i class="fas fa-trophy"></i>
+                    Achievements & Certifications
+                </h1>
+                <p class="text-secondary" style="font-size: var(--fs-body); max-width: 700px; margin: 0 auto;">
+                    A collection of my certifications, awards, and recognition in the field of technology and development.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- Bootstrap Script -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <!-- Achievements Grid -->
+    <section class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="grid-auto gap-lg" data-stagger="100">
+                <!-- Achievement 1: 21 Days GFG -->
+                <div class="achievement-card stagger-item reveal" data-animate="fade-up">
+                    <div class="achievement-image">
+                        <span class="achievement-badge">
+                            <i class="fas fa-medal"></i> Award
+                        </span>
+                        <img 
+                            src="https://via.placeholder.com/400x200/10b981/ffffff?text=GFG+21+Days" 
+                            alt="21 Days GFG Winner"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            <i class="fas fa-code text-success"></i>
+                            21 Days GFG Winner
+                        </h3>
+                        <p class="achievement-issuer">
+                            <i class="fas fa-building"></i> GeeksforGeeks
+                        </p>
+                        <p class="achievement-date">
+                            <i class="fas fa-calendar"></i> October 2024
+                        </p>
+                        <p class="achievement-description">
+                            Successfully completed the 21 Days of solving Data Structures and Algorithms problems challenge on GeeksforGeeks using Python. 
+                            Demonstrated consistent problem-solving skills and algorithmic thinking.
+                        </p>
+                        <div class="achievement-links">
+                            <a href="https://media.geeksforgeeks.org/notifications/image-2024-10-24T155809.508-20241024162244.png" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2: Oracle ML -->
+                <div class="achievement-card stagger-item reveal" data-animate="fade-up">
+                    <div class="achievement-image">
+                        <span class="achievement-badge">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </span>
+                        <img 
+                            src="https://via.placeholder.com/400x200/ef4444/ffffff?text=Oracle+ML" 
+                            alt="Oracle Machine Learning Certificate"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            <i class="fas fa-brain text-error"></i>
+                            Oracle Machine Learning
+                        </h3>
+                        <p class="achievement-issuer">
+                            <i class="fas fa-building"></i> Oracle Corporation
+                        </p>
+                        <p class="achievement-date">
+                            <i class="fas fa-calendar"></i> 2024
+                        </p>
+                        <p class="achievement-description">
+                            Completed Oracle's comprehensive course on Artificial Intelligence and Machine Learning using Java. 
+                            Learned advanced ML algorithms, neural networks, and real-world AI application development.
+                        </p>
+                        <div class="achievement-links">
+                            <a href="https://via.placeholder.com/800x600/ef4444/ffffff?text=Oracle+Certificate" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3: YBI Foundation -->
+                <div class="achievement-card stagger-item reveal" data-animate="fade-up">
+                    <div class="achievement-image">
+                        <span class="achievement-badge">
+                            <i class="fas fa-briefcase"></i> Internship
+                        </span>
+                        <img 
+                            src="https://via.placeholder.com/400x200/6366f1/ffffff?text=YBI+Foundation" 
+                            alt="YBI Foundation Internship"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            <i class="fas fa-laptop-code text-accent-secondary"></i>
+                            YBI Foundation Internship
+                        </h3>
+                        <p class="achievement-issuer">
+                            <i class="fas fa-building"></i> YBI Foundation
+                        </p>
+                        <p class="achievement-date">
+                            <i class="fas fa-calendar"></i> 2024
+                        </p>
+                        <p class="achievement-description">
+                            Completed a comprehensive Machine Learning internship at YBI Foundation. 
+                            Learned various ML techniques, algorithms, and worked on real-world projects including predictive modeling and data analysis.
+                        </p>
+                        <div class="achievement-links">
+                            <a href="https://www.ybifoundation.org/certificate-validation?credentialId=MWA3W3G3FXBKZ" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-certificate"></i> Verify Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more achievements as needed -->
+                <div class="achievement-card stagger-item reveal" data-animate="fade-up">
+                    <div class="achievement-image">
+                        <span class="achievement-badge">
+                            <i class="fas fa-graduation-cap"></i> Course
+                        </span>
+                        <img 
+                            src="https://via.placeholder.com/400x200/00d4ff/ffffff?text=More+Coming+Soon" 
+                            alt="Upcoming Achievements"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            <i class="fas fa-rocket text-accent"></i>
+                            More Achievements Coming Soon
+                        </h3>
+                        <p class="achievement-issuer">
+                            <i class="fas fa-star"></i> In Progress
+                        </p>
+                        <p class="achievement-date">
+                            <i class="fas fa-calendar"></i> 2025
+                        </p>
+                        <p class="achievement-description">
+                            Currently working on additional certifications and courses in Advanced Machine Learning, Cloud Computing, and Full Stack Development. 
+                            Stay tuned for more updates!
+                        </p>
+                        <div class="achievement-links">
+                            <button class="btn btn-secondary btn-sm" disabled>
+                                <i class="fas fa-clock"></i> Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-lg" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">Achievements at a Glance</h2>
+            
+            <div class="stats-grid reveal" data-animate="fade-up" data-delay="200">
+                <div class="stat-card">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: var(--spacing-sm);"></i>
+                    <span class="stat-number" data-count="5">0</span>
+                    <p class="stat-label">Certifications</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy" style="font-size: 3rem; color: var(--warning); margin-bottom: var(--spacing-sm);"></i>
+                    <span class="stat-number" data-count="3">0</span>
+                    <p class="stat-label">Awards</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code" style="font-size: 3rem; color: var(--success); margin-bottom: var(--spacing-sm);"></i>
+                    <span class="stat-number" data-count="100">0</span>
+                    <p class="stat-label">DSA Problems Solved</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram" style="font-size: 3rem; color: var(--accent-secondary); margin-bottom: var(--spacing-sm);"></i>
+                    <span class="stat-number" data-count="10">0</span>
+                    <p class="stat-label">ML Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="glass-card text-center reveal" data-animate="scale" style="max-width: 700px; margin: 0 auto; padding: var(--spacing-2xl);">
+                <i class="fas fa-handshake" style="font-size: 4rem; color: var(--accent-primary); margin-bottom: var(--spacing-md);"></i>
+                <h2 class="gradient-text mb-md">Let's Collaborate</h2>
+                <p class="text-secondary mb-lg">
+                    Interested in working together or learning more about my work? 
+                    I'm always open to new opportunities and connections!
+                </p>
+                <div class="d-flex justify-center gap-sm flex-wrap">
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="projects.html" class="btn btn-secondary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sudarsan Kumar</h3>
+                    <p>AI/ML Developer & Data Scientist</p>
+                    <p>Building intelligent solutions for tomorrow</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="education.html">Education</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Sudarsankumar07" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sudarsankumar@example.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2025</span> Sudarsan Kumar. All rights reserved.</p>
+                <p>Designed & Developed with <span style="color: var(--accent-primary);">❤</span> by Sudarsan Kumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -3,201 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education - Sudarsan Kumar</title>
-    <!-- Font Awesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+    <meta name="description" content="Sudarsan Kumar's educational background and academic achievements">
+    <title>Education | Sudarsan Kumar</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+        /* Enhanced Timeline Styles */
+        .timeline-vertical {
+            position: relative;
+            padding: var(--spacing-lg) 0;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Navbar Styling */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #2c3e50;
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
+        .timeline-vertical::before {
+            content: '';
+            position: absolute;
+            left: 30px;
             top: 0;
-            z-index: 1000;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent-gradient-alt);
         }
 
-        nav h1 {
-            font-size: 1.8rem;
-            /* letter-spacing: 2px; */
-            color: #ecf0f1;
+        .timeline-item-v {
+            position: relative;
+            margin-bottom: var(--spacing-2xl);
+            padding-left: 80px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            /* gap: 1.5rem; */
+        .timeline-marker-v {
+            position: absolute;
+            left: 18px;
+            top: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            border: 4px solid var(--bg-primary);
+            z-index: 10;
+            box-shadow: 0 0 0 6px rgba(0, 212, 255, 0.2);
+            animation: pulse 2s infinite;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #ecf0f1;
-            font-weight: bold;
-            transition: color 0.3s;
-            /* padding: 0.5rem; */
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: #3498db;
-        }
-
-        /* Education Section Styling */
-        .education-section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-        }
-
-        .education-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #2c3e50;
+        .timeline-year {
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            padding: 0.25rem 0.75rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-full);
+            font-size: var(--fs-small);
+            font-weight: 700;
+            color: var(--accent-primary);
+            white-space: nowrap;
+            transform: translateX(-100%) translateX(-15px);
         }
 
         .education-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--glass-shadow);
+            transition: all var(--transition-base);
         }
 
         .education-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .education-card h3 {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.5rem;
-            color: #3498db;
-        }
-
-        .education-card h3 i {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            transition: color 0.3s;
-        }
-
-        .education-card h3 i:hover {
-            color: #3498db;
-        }
-
-        .education-card p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .education-card span {
-            display: block;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #888;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(0, 212, 255, 0.3);
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                /* gap: 1rem; */
+            .timeline-vertical::before {
+                left: 20px;
             }
 
-            .education-card {
-                padding: 1rem;
+            .timeline-marker-v {
+                left: 8px;
+            }
+
+            .timeline-item-v {
+                padding-left: 60px;
+            }
+
+            .timeline-year {
+                position: static;
+                transform: none;
+                display: inline-block;
+                margin-bottom: var(--spacing-sm);
             }
         }
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">Sudarsan Kumar</a>
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="project.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="achievements.html">Achievements & Certificate</a>
-                    </li>
-                </ul>
+            <a href="index.html" class="navbar-brand">
+                <span class="gradient-text">Sudarsan Kumar</span>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link active">Education</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Education Section -->
-    <section class="education-section">
-        <h2 class="education-title">Education</h2>
-
-        <!-- Degree 1 -->
-        <div class="education-card">
-            <h3>B.Tech in Artificial Intelligence and Data Science</h3>
-            <p>Knowledge Institute of Technology, Salem</p>
-            <span>2023 - Present</span>
-            <p>Relevant coursework: Machine Learning, Deep Learning, Natural Language Processing, Data Mining, and Web Development. Gained hands-on experience in Python, JavaScript, and building real-world applications.</p>
-        </div>
-
-        <!-- Degree 2 -->
-        <div class="education-card">
-            <h3>Diploma in Electronic Robotics</h3>
-            <p>CSI Polytechnic College</p>
-            <span>2019 - 2021</span>
-            <p>Focused on Basics Electricals and Electronics, CAD/CAM, and programming G-code/M-code.</p>
-        </div>
-
-        <!-- Degree 3 -->
-        <div class="education-card">
-            <h3>Secondary School Leaving Certificate (SSLC)</h3>
-            <p>Bharathi Vidhyalaya Higher Secondary School</p>
-            <span>2018 - 2019</span>
-            <p>Secured excellent grades in core subjects.</p>
+    <!-- Hero Section -->
+    <section class="py-xl" style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); padding-top: 120px; min-height: 40vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center reveal" data-animate="fade-up">
+                <h1 class="gradient-text mb-md" style="font-size: var(--fs-h1);">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education Journey
+                </h1>
+                <p class="text-secondary" style="font-size: var(--fs-body); max-width: 700px; margin: 0 auto;">
+                    My academic path in technology and innovation, building a strong foundation 
+                    for a career in Artificial Intelligence and Data Science.
+                </p>
+            </div>
         </div>
     </section>
 
-    <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <!-- Timeline Section -->
+    <section class="py-xl" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="timeline-vertical">
+                <!-- Education 1: B.Tech -->
+                <div class="timeline-item-v reveal-left" data-animate="fade-up" data-delay="100">
+                    <div class="timeline-year">2023 - Present</div>
+                    <div class="timeline-marker-v"></div>
+                    <div class="education-card">
+                        <div class="d-flex align-center gap-sm mb-md">
+                            <div style="width: 50px; height: 50px; background: var(--accent-gradient-alt); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-university" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-primary mb-0" style="font-size: var(--fs-h3);">
+                                    Bachelor of Technology
+                                </h3>
+                                <p class="text-accent font-semibold mb-0">Artificial Intelligence & Data Science</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-md">
+                            <p class="text-secondary mb-xs">
+                                <i class="fas fa-building text-accent"></i>
+                                <strong>Knowledge Institute of Technology, Salem</strong>
+                            </p>
+                            <p class="text-muted text-sm mb-0">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                                Tamil Nadu, India
+                            </p>
+                        </div>
+                        
+                        <div class="mb-md p-md" style="background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-primary); border-radius: var(--radius-sm);">
+                            <h4 class="text-primary mb-sm" style="font-size: var(--fs-h4);">
+                                <i class="fas fa-book-open"></i> Key Coursework
+                            </h4>
+                            <div class="d-flex flex-wrap gap-xs">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Data Mining</span>
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Python Programming</span>
+                                <span class="tag">Data Structures</span>
+                                <span class="tag">Algorithms</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-secondary mb-0">
+                            <i class="fas fa-star text-warning"></i>
+                            Gained hands-on experience in Python, JavaScript, TensorFlow, and building real-world AI applications. 
+                            Active participant in hackathons and technical workshops.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education 2: Diploma -->
+                <div class="timeline-item-v reveal-left" data-animate="fade-up" data-delay="200">
+                    <div class="timeline-year">2019 - 2021</div>
+                    <div class="timeline-marker-v"></div>
+                    <div class="education-card">
+                        <div class="d-flex align-center gap-sm mb-md">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #6366f1 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-certificate" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-primary mb-0" style="font-size: var(--fs-h3);">
+                                    Diploma in Engineering
+                                </h3>
+                                <p class="text-accent font-semibold mb-0">Electronic Robotics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-md">
+                            <p class="text-secondary mb-xs">
+                                <i class="fas fa-building text-accent"></i>
+                                <strong>CSI Polytechnic College</strong>
+                            </p>
+                            <p class="text-muted text-sm mb-0">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                                Tamil Nadu, India
+                            </p>
+                        </div>
+                        
+                        <div class="mb-md p-md" style="background: rgba(99, 102, 241, 0.05); border-left: 3px solid var(--accent-secondary); border-radius: var(--radius-sm);">
+                            <h4 class="text-primary mb-sm" style="font-size: var(--fs-h4);">
+                                <i class="fas fa-cogs"></i> Specialization
+                            </h4>
+                            <div class="d-flex flex-wrap gap-xs">
+                                <span class="tag">Basic Electricals</span>
+                                <span class="tag">Electronics</span>
+                                <span class="tag">CAD/CAM</span>
+                                <span class="tag">G-code/M-code</span>
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-secondary mb-0">
+                            <i class="fas fa-lightbulb text-warning"></i>
+                            Built a strong foundation in electrical systems, robotics, and automation. 
+                            Worked on practical projects involving CNC programming and robotic systems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education 3: SSLC -->
+                <div class="timeline-item-v reveal-left" data-animate="fade-up" data-delay="300">
+                    <div class="timeline-year">2018 - 2019</div>
+                    <div class="timeline-marker-v"></div>
+                    <div class="education-card">
+                        <div class="d-flex align-center gap-sm mb-md">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-school" style="font-size: 1.5rem; color: white;"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-primary mb-0" style="font-size: var(--fs-h3);">
+                                    SSLC (10th Grade)
+                                </h3>
+                                <p class="text-accent font-semibold mb-0">Secondary Education</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-md">
+                            <p class="text-secondary mb-xs">
+                                <i class="fas fa-building text-accent"></i>
+                                <strong>Bharathi Vidhyalaya Higher Secondary School</strong>
+                            </p>
+                            <p class="text-muted text-sm mb-0">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                                Tamil Nadu, India
+                            </p>
+                        </div>
+                        
+                        <p class="text-secondary mb-0">
+                            <i class="fas fa-trophy text-warning"></i>
+                            Secured excellent grades in core subjects including Mathematics, Science, and Computer Applications. 
+                            Developed a strong interest in technology and problem-solving during this period.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-lg" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">Technical Skills</h2>
+            
+            <div class="reveal" data-animate="fade-up" data-delay="200">
+                <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Programming Languages -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">
+                                <i class="fab fa-python text-accent"></i> Python
+                            </span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">
+                                <i class="fas fa-brain text-accent"></i> Machine Learning
+                            </span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">
+                                <i class="fas fa-code text-accent"></i> Web Development
+                            </span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">
+                                <i class="fas fa-chart-bar text-accent"></i> Data Analysis
+                            </span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+
+                    <!-- Deep Learning -->
+                    <div class="skill-item mb-0">
+                        <div class="skill-header">
+                            <span class="skill-name">
+                                <i class="fas fa-network-wired text-accent"></i> Deep Learning
+                            </span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sudarsan Kumar</h3>
+                    <p>AI/ML Developer & Data Scientist</p>
+                    <p>Building intelligent solutions for tomorrow</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="education.html">Education</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Sudarsankumar07" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sudarsankumar@example.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2025</span> Sudarsan Kumar. All rights reserved.</p>
+                <p>Designed & Developed with <span style="color: var(--accent-primary);">❤</span> by Sudarsan Kumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

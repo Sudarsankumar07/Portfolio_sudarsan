@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sudarsan Kumar - AI/ML Developer, Data Scientist & Full Stack Developer Portfolio">
+    <meta name="keywords" content="AI, Machine Learning, Data Science, Portfolio, Web Development">
+    <meta name="author" content="Sudarsan Kumar">
+    <title>Sudarsan Kumar | AI/ML Developer & Data Scientist</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="gradient-text">Sudarsan Kumar</span>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen d-flex align-center position-relative" style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); overflow: hidden;">
+        <!-- Particles Background -->
+        <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></div>
+        
+        <div class="container position-relative" style="z-index: 10;">
+            <div class="d-flex align-center justify-between flex-column-mobile gap-lg">
+                <!-- Profile Image -->
+                <div class="reveal-scale text-center" data-animate="scale">
+                    <div class="profile-image-wrapper" style="width: 280px; height: 280px; margin: 0 auto;">
+                        <img 
+                            src="https://via.placeholder.com/280/667eea/ffffff?text=SK" 
+                            alt="Sudarsan Kumar" 
+                            class="animate-float"
+                            style="width: 100%; height: 100%; border-radius: 50%; border: 5px solid rgba(0, 212, 255, 0.3); box-shadow: 0 0 40px rgba(0, 212, 255, 0.4); object-fit: cover;"
+                        >
+                    </div>
+                </div>
+                
+                <!-- Hero Content -->
+                <div class="flex-1" style="max-width: 700px;">
+                    <div class="reveal-right" data-animate="fade-up" data-delay="200">
+                        <p class="text-accent text-lg mb-sm" style="font-weight: 600;">👋 Hi, I'm</p>
+                        <h1 class="gradient-text mb-md" style="font-size: var(--fs-hero); line-height: 1.1; margin-bottom: var(--spacing-sm);">
+                            Sudarsan Kumar
+                        </h1>
+                        <h2 class="text-secondary mb-lg" style="font-size: var(--fs-h3); font-weight: 500;">
+                            <span data-typing="AI/ML Developer | Data Scientist | Full Stack Developer" data-typing-speed="100"></span>
+                        </h2>
+                        <p class="text-secondary mb-xl" style="font-size: var(--fs-body); line-height: 1.8; max-width: 600px;">
+                            3rd-year B.Tech student specializing in <span class="text-accent font-semibold">Artificial Intelligence and Data Science</span>. 
+                            Passionate about Machine Learning, Deep Learning, and building innovative solutions that make a difference.
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="d-flex gap-sm flex-wrap">
+                            <a href="projects.html" class="btn btn-primary">
+                                <i class="fas fa-code"></i>
+                                View Projects
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i>
+                                Get In Touch
+                            </a>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="social-links mt-lg">
+                            <a href="https://github.com/Sudarsankumar07" target="_blank" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:sudarsankumar@example.com" class="social-icon" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="text-center mt-xl" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);">
+                <a href="#about" style="color: var(--accent-primary); text-decoration: none;">
+                    <i class="fas fa-chevron-down animate-bounce" style="font-size: 2rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">About Me</h2>
+            
+            <div class="d-flex flex-column-mobile gap-xl align-center">
+                <div class="flex-1 reveal-left" data-animate="slide-left">
+                    <div class="glass-card">
+                        <h3 class="text-accent mb-md">
+                            <i class="fas fa-user-graduate"></i>
+                            Who I Am
+                        </h3>
+                        <p class="text-secondary mb-md">
+                            I'm a dedicated B.Tech student at Knowledge Institute of Technology, Salem, specializing in Artificial Intelligence and Data Science. 
+                            My journey in tech is driven by curiosity and a passion for solving real-world problems through intelligent solutions.
+                        </p>
+                        <p class="text-secondary">
+                            With expertise spanning Machine Learning, Deep Learning, Natural Language Processing, and Full Stack Development, 
+                            I'm constantly expanding my skill set to stay at the forefront of technology innovation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-1 reveal-right" data-animate="slide-right">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="20">0</span>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="5">0</span>
+                            <p class="stat-label">Certifications</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="15">0</span>
+                            <p class="stat-label">Technologies</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="3">0</span>
+                            <p class="stat-label">Years Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-lg" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">Tech Stack</h2>
+            
+            <div class="reveal" data-animate="fade-up" data-delay="200" data-stagger="100">
+                <div class="grid-auto gap-md">
+                    <!-- ML/AI -->
+                    <div class="glass-card text-center hover-lift">
+                        <i class="fas fa-brain" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: var(--spacing-sm);"></i>
+                        <h3 class="text-primary mb-sm">Machine Learning</h3>
+                        <p class="text-secondary text-sm">Python, TensorFlow, Scikit-learn, PyTorch</p>
+                    </div>
+                    
+                    <!-- Web Development -->
+                    <div class="glass-card text-center hover-lift">
+                        <i class="fas fa-code" style="font-size: 3rem; color: var(--accent-secondary); margin-bottom: var(--spacing-sm);"></i>
+                        <h3 class="text-primary mb-sm">Web Development</h3>
+                        <p class="text-secondary text-sm">HTML, CSS, JavaScript, React, Node.js</p>
+                    </div>
+                    
+                    <!-- Data Science -->
+                    <div class="glass-card text-center hover-lift">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: var(--spacing-sm);"></i>
+                        <h3 class="text-primary mb-sm">Data Science</h3>
+                        <p class="text-secondary text-sm">Pandas, NumPy, Matplotlib, Seaborn</p>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="glass-card text-center hover-lift">
+                        <i class="fas fa-tools" style="font-size: 3rem; color: var(--accent-secondary); margin-bottom: var(--spacing-sm);"></i>
+                        <h3 class="text-primary mb-sm">Tools & Others</h3>
+                        <p class="text-secondary text-sm">Git, Docker, VS Code, Jupyter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">Featured Projects</h2>
+            
+            <div class="grid-auto gap-lg reveal" data-animate="fade-up" data-stagger="150">
+                <!-- Project 1 -->
+                <div class="project-card stagger-item">
+                    <div class="project-card-image">
+                        <img src="https://via.placeholder.com/400x220/667eea/ffffff?text=Movie+Recommender" alt="Movie Recommendation System">
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07/Movie-recommendation" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Movie Recommendation System</h3>
+                        <p class="project-card-description">
+                            ML-based recommendation system using TF-IDF vectorizer for personalized movie suggestions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">TF-IDF</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card stagger-item">
+                    <div class="project-card-image">
+                        <img src="https://via.placeholder.com/400x220/764ba2/ffffff?text=Essay+Finder" alt="Best Essay Finder">
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Best Essay Finder</h3>
+                        <p class="project-card-description">
+                            AI system to evaluate essays and detect AI-generated content in interview submissions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">AI Detection</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card stagger-item">
+                    <div class="project-card-image">
+                        <img src="https://via.placeholder.com/400x220/6366f1/ffffff?text=Cricket+Analysis" alt="Virat Kohli Stats">
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">Cricket Score Prediction</h3>
+                        <p class="project-card-description">
+                            ML regression model to predict Virat Kohli's 2024 performance using historical data.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Regression</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-xl reveal" data-animate="fade-up">
+                <a href="projects.html" class="btn btn-ghost">
+                    View All Projects
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-lg" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title reveal" data-animate="fade-up">Let's Connect</h2>
+            
+            <div class="text-center reveal" data-animate="fade-up" data-delay="200" style="max-width: 600px; margin: 0 auto;">
+                <p class="text-secondary mb-xl" style="font-size: var(--fs-body);">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
+                    Feel free to reach out!
+                </p>
+                
+                <div class="d-flex justify-center gap-md flex-wrap">
+                    <a href="mailto:sudarsankumar@example.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Sudarsankumar07" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sudarsan Kumar</h3>
+                    <p>AI/ML Developer & Data Scientist</p>
+                    <p>Building intelligent solutions for tomorrow</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="education.html">Education</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Sudarsankumar07" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sudarsankumar@example.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2025</span> Sudarsan Kumar. All rights reserved.</p>
+                <p>Designed & Developed with <span style="color: var(--accent-primary);">❤</span> by Sudarsan Kumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/particles-config.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

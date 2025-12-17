@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sudarsan Kumar's portfolio of Machine Learning, AI, and Web Development projects">
+    <title>Projects | Sudarsan Kumar</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="gradient-text">Sudarsan Kumar</span>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-xl" style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); padding-top: 120px; min-height: 40vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center reveal" data-animate="fade-up">
+                <h1 class="gradient-text mb-md" style="font-size: var(--fs-h1);">
+                    My Projects
+                </h1>
+                <p class="text-secondary" style="font-size: var(--fs-body); max-width: 700px; margin: 0 auto;">
+                    A showcase of my work in Machine Learning, Data Science, and Web Development. 
+                    Each project represents a unique challenge and learning experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-md" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="d-flex justify-center gap-sm flex-wrap reveal" data-animate="fade-up">
+                <button class="btn btn-secondary active" data-filter="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="btn btn-secondary" data-filter="ml">
+                    <i class="fas fa-brain"></i> Machine Learning
+                </button>
+                <button class="btn btn-secondary" data-filter="web">
+                    <i class="fas fa-code"></i> Web Development
+                </button>
+                <button class="btn btn-secondary" data-filter="data">
+                    <i class="fas fa-chart-bar"></i> Data Science
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="grid-auto gap-lg" data-stagger="100">
+                <!-- Project 1: Movie Recommendation -->
+                <div class="project-card stagger-item" data-category="ml">
+                    <div class="project-card-image">
+                        <img 
+                            src="https://via.placeholder.com/400x220/667eea/ffffff?text=Movie+Recommender" 
+                            alt="Movie Recommendation System"
+                            loading="lazy"
+                        >
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07/Movie-recommendation/blob/main/Intern.ipynb" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">
+                            <i class="fas fa-film text-accent"></i>
+                            Movie Recommendation System
+                        </h3>
+                        <p class="project-card-description">
+                            Built an intelligent movie recommendation engine using TF-IDF vectorizer and cosine similarity. 
+                            The system analyzes movie features and user preferences to suggest personalized recommendations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">TF-IDF</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sudarsankumar07/Movie-recommendation/blob/main/Intern.ipynb" target="_blank" class="btn btn-ghost btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Portfolio Website -->
+                <div class="project-card stagger-item" data-category="web">
+                    <div class="project-card-image">
+                        <img 
+                            src="https://via.placeholder.com/400x220/764ba2/ffffff?text=Portfolio+Website" 
+                            alt="Personal Portfolio"
+                            loading="lazy"
+                        >
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07/Portfolio" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="index.html" class="btn btn-secondary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">
+                            <i class="fas fa-laptop-code text-accent"></i>
+                            Personal Portfolio Website
+                        </h3>
+                        <p class="project-card-description">
+                            Modern, responsive portfolio website built with advanced CSS techniques including glassmorphism, 
+                            smooth animations, and particle effects. Showcases projects, skills, and achievements.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sudarsankumar07/Portfolio" target="_blank" class="btn btn-ghost btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="index.html" class="btn btn-ghost btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Best Essay Finder -->
+                <div class="project-card stagger-item" data-category="ml">
+                    <div class="project-card-image">
+                        <img 
+                            src="https://via.placeholder.com/400x220/6366f1/ffffff?text=Essay+Finder" 
+                            alt="Best Essay Finder"
+                            loading="lazy"
+                        >
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">
+                            <i class="fas fa-file-alt text-accent"></i>
+                            Best Essay Finder & AI Detector
+                        </h3>
+                        <p class="project-card-description">
+                            Advanced NLP system that evaluates interview essays, identifies the best submissions, and detects 
+                            AI-generated content to ensure authenticity. Uses natural language processing and pattern recognition.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">AI Detection</span>
+                            <span class="tag">Text Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank" class="btn btn-ghost btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Virat Kohli Score Prediction -->
+                <div class="project-card stagger-item" data-category="data">
+                    <div class="project-card-image">
+                        <img 
+                            src="https://via.placeholder.com/400x220/00d4ff/ffffff?text=Cricket+Analytics" 
+                            alt="Cricket Score Prediction"
+                            loading="lazy"
+                        >
+                        <div class="project-card-overlay">
+                            <a href="https://github.com/Sudarsankumar07" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">
+                            <i class="fas fa-chart-line text-accent"></i>
+                            Cricket Score Prediction 2024
+                        </h3>
+                        <p class="project-card-description">
+                            Predictive analytics model using machine learning regression to forecast Virat Kohli's 
+                            2024 cricket performance. Analyzes historical data, trends, and statistical patterns.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Regression</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sudarsankumar07" target="_blank" class="btn btn-ghost btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add More Projects Here -->
+                <div class="project-card stagger-item" data-category="ml">
+                    <div class="project-card-image">
+                        <img 
+                            src="https://via.placeholder.com/400x220/667eea/ffffff?text=Coming+Soon" 
+                            alt="Upcoming Project"
+                            loading="lazy"
+                        >
+                        <div class="project-card-overlay">
+                            <button class="btn btn-secondary btn-sm" disabled>
+                                <i class="fas fa-clock"></i> Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-card-title">
+                            <i class="fas fa-rocket text-accent"></i>
+                            More Projects Coming Soon
+                        </h3>
+                        <p class="project-card-description">
+                            Currently working on exciting new projects in Deep Learning, Computer Vision, and Full Stack Development. 
+                            Stay tuned for updates!
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">In Progress</span>
+                            <span class="tag">Exciting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-lg" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="glass-card text-center reveal" data-animate="scale" style="max-width: 700px; margin: 0 auto; padding: var(--spacing-2xl);">
+                <i class="fas fa-code" style="font-size: 4rem; color: var(--accent-primary); margin-bottom: var(--spacing-md);"></i>
+                <h2 class="gradient-text mb-md">Have a Project in Mind?</h2>
+                <p class="text-secondary mb-lg">
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Let's build something amazing together!
+                </p>
+                <div class="d-flex justify-center gap-sm flex-wrap">
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    <a href="https://github.com/Sudarsankumar07" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        View GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sudarsan Kumar</h3>
+                    <p>AI/ML Developer & Data Scientist</p>
+                    <p>Building intelligent solutions for tomorrow</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="education.html">Education</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Sudarsankumar07" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudarsan-kumar-a73a69216/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sudarsankumar@example.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2025</span> Sudarsan Kumar. All rights reserved.</p>
+                <p>Designed & Developed with <span style="color: var(--accent-primary);">❤</span> by Sudarsan Kumar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Filter Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const projects = document.querySelectorAll('[data-category]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter projects with animation
+                    projects.forEach((project, index) => {
+                        const category = project.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            setTimeout(() => {
+                                project.style.display = 'flex';
+                                setTimeout(() => {
+                                    project.classList.add('animate');
+                                }, 50);
+                            }, index * 50);
+                        } else {
+                            project.style.display = 'none';
+                            project.classList.remove('animate');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
