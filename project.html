@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sudarsan Kumar</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #2c3e50;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #ecf0f1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            /* gap: 1.5rem; */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+            /* text-decoration: underline; */
+        }
+
+        .projects {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            margin: 0 1rem 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .project-card a:hover {
+            background: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                /* gap: 1rem; */
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">Sudarsan Kumar</a>
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link activate" href="project.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="education.html">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="achievements.html">Achievements & Certificate</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="projects">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="Screenshot 2024-11-18 215427.png" alt="Movie Recommendation Screenshot">
+            <h3>Project 1: Movie Recommendation System</h3>
+            <p>A machine learning-based movie recommendation system using TF-IDF vectorizer.</p>
+            <a href="https://github.com/Sudarsankumar07/Movie-recommendation/blob/main/Intern.ipynb" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="Screenshot 2024-11-18 214708.png" alt="Personal Portfolio Screenshot">
+            <h3>Project 2: Personal Portfolio</h3>
+            <p>An interactive portfolio website showcasing my skills and projects.</p>
+            <a href="https://github.com/Sudarsankumar07/Portfolio" target="_blank">GitHub</a>
+            <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="image.png" alt="Best Essay Finder Screenshot">
+            <h3>Project 3: Best Essay Finder</h3>
+            <p>This system evaluates essays submitted in interviews, identifies the best ones, and detects AI-generated content to reject them.</p>
+            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img src="Screenshot 2024-11-18 221852.png" alt="Virat kohli stats">
+            <h3>Project 4: Virat Kohli Score prediction 2024</h3>
+            <p>In this project using 2024 Score of Virat kohli stats to predict and using Machine learning Regression.</p>
+            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Bootstrap Script -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>

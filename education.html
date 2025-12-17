@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Sudarsan Kumar</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #2c3e50;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            /* letter-spacing: 2px; */
+            color: #ecf0f1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            /* gap: 1.5rem; */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            transition: color 0.3s;
+            /* padding: 0.5rem; */
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #3498db;
+        }
+
+        /* Education Section Styling */
+        .education-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .education-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        .education-card h3 i {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .education-card h3 i:hover {
+            color: #3498db;
+        }
+
+        .education-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .education-card span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                /* gap: 1rem; */
+            }
+
+            .education-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sudarsan Kumar</a>
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="education.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="achievements.html">Achievements & Certificate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <h2 class="education-title">Education</h2>
+
+        <!-- Degree 1 -->
+        <div class="education-card">
+            <h3>B.Tech in Artificial Intelligence and Data Science</h3>
+            <p>Knowledge Institute of Technology, Salem</p>
+            <span>2023 - Present</span>
+            <p>Relevant coursework: Machine Learning, Deep Learning, Natural Language Processing, Data Mining, and Web Development. Gained hands-on experience in Python, JavaScript, and building real-world applications.</p>
+        </div>
+
+        <!-- Degree 2 -->
+        <div class="education-card">
+            <h3>Diploma in Electronic Robotics</h3>
+            <p>CSI Polytechnic College</p>
+            <span>2019 - 2021</span>
+            <p>Focused on Basics Electricals and Electronics, CAD/CAM, and programming G-code/M-code.</p>
+        </div>
+
+        <!-- Degree 3 -->
+        <div class="education-card">
+            <h3>Secondary School Leaving Certificate (SSLC)</h3>
+            <p>Bharathi Vidhyalaya Higher Secondary School</p>
+            <span>2018 - 2019</span>
+            <p>Secured excellent grades in core subjects.</p>
+        </div>
+    </section>
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    ></script>
+</body>
+</html>
