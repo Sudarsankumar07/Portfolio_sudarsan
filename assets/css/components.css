@@ -156,7 +156,7 @@
 /* ============ BUTTONS ============ */
 .btn {
     position: relative;
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
@@ -169,24 +169,20 @@
     transition: all var(--transition-base);
     overflow: hidden;
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
+/* Force reset on all pseudo-classes */
+.btn,
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:active,
+.btn:focus {
+    display: inline-flex !important;
+    text-decoration: none !important;
 }
 
 .btn-primary {
@@ -492,7 +488,7 @@
 .social-icon {
     width: 45px;
     height: 45px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background: var(--glass-bg);
@@ -503,6 +499,16 @@
     color: var(--text-primary);
     font-size: 1.2rem;
     transition: all var(--transition-base);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.social-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .social-icon:hover {
@@ -510,6 +516,49 @@
     color: var(--bg-primary);
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+/* ============ ACHIEVEMENTS & PROJECT ITEMS (NEW) ============ */
+.achievement-item {
+    /* helper class to target new achievement entries */
+}
+
+.achievement-item .achievement-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+}
+
+.achievement-item .achievement-image img,
+.achievement-image .drive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: var(--spacing-md);
+}
+
+.project-item .project-card-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-item .project-card-image img,
+.project-card-image .drive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Generic helper for Google Drive images */
+.drive-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ============ FOOTER ============ */

@@ -270,21 +270,31 @@ function initSkillBars() {
 // ============ BUTTON RIPPLE EFFECT ============
 function createRipple(event) {
     const button = event.currentTarget;
+    
+    // Remove any existing ripples first
+    const existingRipples = button.querySelectorAll('.ripple');
+    existingRipples.forEach(r => r.remove());
+    
     const ripple = document.createElement('span');
+    const rect = button.getBoundingClientRect();
     const diameter = Math.max(button.clientWidth, button.clientHeight);
     const radius = diameter / 2;
     
-    ripple.style.width = ripple.style.height = `${diameter}px`;
-    ripple.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-    ripple.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    // Calculate position relative to the button
+    ripple.style.width = `${diameter}px`;
+    ripple.style.height = `${diameter}px`;
+    ripple.style.left = `${event.clientX - rect.left - radius}px`;
+    ripple.style.top = `${event.clientY - rect.top - radius}px`;
     ripple.classList.add('ripple');
     
-    const rippleEffect = button.getElementsByClassName('ripple')[0];
-    if (rippleEffect) {
-        rippleEffect.remove();
-    }
-    
     button.appendChild(ripple);
+    
+    // Remove ripple after animation completes
+    setTimeout(() => {
+        if (ripple.parentNode) {
+            ripple.remove();
+        }
+    }, 650);
 }
 
 // Add ripple to all buttons
@@ -433,6 +443,48 @@ function debounce(func, wait = 10) {
 window.addEventListener('scroll', debounce(() => {
     // Any expensive scroll operations go here
 }, 10));
+
+// ============ FIX BUTTON/CARD HOVER STATE ON TAB SWITCH ============
+// When user clicks external link (opens new tab), hover state gets stuck
+// This clears all hover states when tab becomes visible again
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        // Tab became visible - clear all stuck hover states
+        
+        // Force remove hover from all cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.classList.add('force-reset');
+            card.style.transform = 'translateY(0)';
+        });
+        
+        // Remove forced reset after animation completes
+        setTimeout(() => {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('force-reset');
+                card.style.transform = '';
+            });
+        }, 100);
+    }
+});
+
+// Also clear hover states when window loses focus
+window.addEventListener('blur', () => {
+    // User clicked something that took them away (like opening new tab)
+    setTimeout(() => {
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.transform = 'translateY(0)';
+        });
+    }, 50);
+});
+
+// Clear on window focus return
+window.addEventListener('focus', () => {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.style.transform = '';
+        card.removeAttribute('style');
+    });
+});
 
 // ============ CONSOLE MESSAGE ============
 console.log(

@@ -186,19 +186,10 @@ code {
     color: var(--bg-primary);
 }
 
-::-moz-selection {
-    background: var(--accent-primary);
-    color: var(--bg-primary);
-}
-
 /* ============ FOCUS STYLES ============ */
-:focus {
+:focus-visible {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
-}
-
-:focus:not(:focus-visible) {
-    outline: none;
 }
 
 /* ============ CONTAINER ============ */
@@ -271,12 +262,6 @@ button {
 }
 
 /* ============ RESPONSIVE BREAKPOINTS ============ */
-/* 
-    Mobile: < 768px
-    Tablet: 768px - 1024px
-    Desktop: > 1024px
-*/
-
 @media (max-width: 768px) {
     :root {
         --spacing-xl: 2rem;
@@ -301,16 +286,4 @@ body::before {
                 radial-gradient(ellipse at bottom, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
-}
-
-/* ============ PRINT STYLES ============ */
-@media print {
-    body {
-        background: white;
-        color: black;
-    }
-    
-    nav, footer {
-        display: none;
-    }
 }
