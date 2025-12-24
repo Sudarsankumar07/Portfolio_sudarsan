@@ -5,13 +5,20 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove scroll-progress bar on mobile if it exists
+    if (window.innerWidth <= 768) {
+        const bar = document.querySelector('.scroll-progress');
+        if (bar) bar.remove();
+    }
     initializeApp();
 });
 
 // ============ MAIN INITIALIZATION ============
 function initializeApp() {
     initNavbar();
-    initScrollProgress();
+    if (window.innerWidth > 768) {
+        initScrollProgress();
+    }
     initBackToTop();
     initScrollAnimations();
     initMobileMenu();

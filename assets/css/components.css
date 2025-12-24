@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+    .scroll-progress {
+        display: none !important;
+    }
+}
 /* ========================================
    COMPONENTS - Reusable UI Elements
    Glassmorphism & Advanced Design System
@@ -43,20 +48,28 @@
 }
 
 .nav-menu {
-    display: flex;
-    gap: var(--spacing-lg);
-    align-items: center;
-}
-
-.nav-link {
-    position: relative;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: color var(--transition-base);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-md) 0;
+    background: rgba(10, 14, 39, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: var(--z-fixed);
+    transition: all var(--transition-base);
 }
 
 .nav-link::after {
+    .hero-section .profile-image-wrapper {
+        margin-top: 80px !important;
+    }
+    .navbar {
+        background: rgba(10, 14, 39, 0.92);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+    }
     content: '';
     position: absolute;
     bottom: 0;
@@ -115,7 +128,7 @@
     width: 0%;
     height: 3px;
     background: var(--accent-gradient-alt);
-    z-index: var(--z-tooltip);
+    z-index: 2000;
     transition: width 0.1s linear;
 }
 
@@ -657,6 +670,9 @@
 }
 
 @media (max-width: 768px) {
+    .hero-section .profile-image-wrapper {
+        margin-top: 120px !important;
+    }
     .menu-toggle {
         display: flex;
     }
@@ -693,4 +709,7 @@
         width: 45px;
         height: 45px;
     }
+        .social-links {
+            margin-top: 120px;
+        }
 }
