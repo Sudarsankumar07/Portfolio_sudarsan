@@ -205,10 +205,10 @@ function initCounterAnimations() {
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                counter.textContent = Math.floor(current) + '+';
+                counter.textContent = Math.floor(current);
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + '+';
+                counter.textContent = target;
             }
         };
         

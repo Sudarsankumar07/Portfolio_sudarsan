@@ -148,15 +148,15 @@
                 <div class="flex-1">
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <span class="stat-number" data-count="20">0</span>
+                            <span class="stat-number" data-count="10">0</span>
                             <p class="stat-label">Projects Completed</p>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-number" data-count="10">0</span>
                             <p class="stat-label">Certifications</p>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-number" data-count="5">0</span>
                             <p class="stat-label">Technologies</p>
                         </div>
                         <div class="stat-card">
@@ -208,6 +208,57 @@
         </div>
     </section>
 
+    <!-- Coding Profiles Section -->
+    <section class="py-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title">Coding Profiles</h2>
+            
+            <div class="d-flex justify-center flex-wrap gap-lg">
+                <!-- GeeksforGeeks Stats -->
+                <div class="glass-card text-center" style="padding: var(--spacing-xl); max-width: 500px;">
+                    <h3 class="text-accent mb-md">
+                        <i class="fas fa-code"></i> GeeksforGeeks
+                    </h3>
+                    <div id="gfg-stats" style="min-height: 200px;">
+                        <a href="https://www.geeksforgeeks.org/user/sudharsa4hg9/" target="_blank" style="text-decoration: none;">
+                            <div class="gfg-card" style="background: linear-gradient(135deg, #2f8d46 0%, #1a5d2a 100%); border-radius: 12px; padding: 25px; color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                    <img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" alt="GFG" style="width: 50px; height: 50px; background: white; border-radius: 8px; padding: 5px;">
+                                    <div>
+                                        <div style="font-size: 1.3rem; font-weight: bold;">sudharsa4hg9</div>
+                                        <div style="font-size: 0.85rem; opacity: 0.9;">GeeksforGeeks Profile</div>
+                                    </div>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center;">
+                                    <div style="background: rgba(255,255,255,0.15); padding: 12px 8px; border-radius: 8px;">
+                                        <div style="font-size: 1.5rem; font-weight: bold;">🔥 83</div>
+                                        <div style="font-size: 0.75rem; opacity: 0.9;">Day Streak</div>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.15); padding: 12px 8px; border-radius: 8px;">
+                                        <div style="font-size: 1.5rem; font-weight: bold;">100+</div>
+                                        <div style="font-size: 0.75rem; opacity: 0.9;">Problems</div>
+                                    </div>
+                                    <div style="background: rgba(255,255,255,0.15); padding: 12px 8px; border-radius: 8px;">
+                                        <div style="font-size: 1.5rem; font-weight: bold;">⭐</div>
+                                        <div style="font-size: 0.75rem; opacity: 0.9;">Active</div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 15px; text-align: center; font-size: 0.8rem; opacity: 0.8;">
+                                    <i class="fas fa-external-link-alt"></i> Click to view live stats
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-md">
+                        <a href="https://www.geeksforgeeks.org/user/sudharsa4hg9/" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fas fa-external-link-alt"></i> View Live Stats
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Featured Projects -->
     <section class="py-lg" style="background: var(--bg-primary);">
         <div class="container">
@@ -215,28 +266,29 @@
             
             <div class="grid-auto gap-lg">
                 
-                <!-- Project 2 -->
+                <!-- Project 1: MGPT Legal AI -->
                 <div class="project-card">
                     <div class="project-card-image">
-                        <img src="https://lh3.googleusercontent.com/d/1uCU7npwmBuNu0P_KdGNpxqLJw6dqdZnf" alt="Best Essay Finder">
+                        <img src="https://lh3.googleusercontent.com/d/1xzQlfarfbZRqNvgDwZDrTE-ymOh_y3gB" alt="MGPT - Legal AI Demo">
                         <div class="project-card-overlay">
-                            <a href="https://github.com/Sudarsankumar07/Best_Essay_Finder" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fab fa-github"></i> View Code
+                            <a href="https://mgpt-9sat.onrender.com/" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
                     <div class="project-card-content">
-                        <h3 class="project-card-title">Best Essay Finder</h3>
+                        <h3 class="project-card-title">MGPT - Legal AI Demo</h3>
                         <p class="project-card-description">
-                            AI system to evaluate essays and detect AI-generated content in interview submissions.
+                            AI-powered legal document analyzer using Streamlit, ChromaDB, and Groq LLM for summarized insights.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">NLP</span>
-                            <span class="tag">AI Detection</span>
-                            <span class="tag">Python</span>
+                            <span class="tag">Gen AI</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Streamlit</span>
                         </div>
                     </div>
                 </div>
+            </div>
             
             <div class="text-center mt-xl">
                 <a href="projects.html" class="btn btn-ghost">
