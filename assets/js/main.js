@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (bar) bar.remove();
     }
     initializeApp();
+
+    // Responsive Navbar Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('open');
+        });
+    }
 });
 
 // ============ MAIN INITIALIZATION ============

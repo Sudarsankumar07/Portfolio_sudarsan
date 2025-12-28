@@ -47,29 +47,48 @@
     color: var(--accent-primary);
 }
 
+/* Default: desktop - show menu inline */
 .nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: var(--spacing-md) 0;
-    background: rgba(10, 14, 39, 0.85);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--glass-border);
-    z-index: var(--z-fixed);
-    transition: all var(--transition-base);
+        display: flex;
+        gap: var(--spacing-lg);
+        align-items: center;
+        position: static;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--glass-bg);
+        z-index: 100;
+        box-shadow: var(--shadow-lg);
+        padding: var(--spacing-lg) 0;
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.nav-link {
+    position: relative;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color var(--transition-base);
+    overflow: hidden;
 }
 
 .nav-link::after {
-    .hero-section .profile-image-wrapper {
-        margin-top: 80px !important;
-    }
-    .navbar {
-        background: rgba(10, 14, 39, 0.92);
-        backdrop-filter: blur(22px);
-        -webkit-backdrop-filter: blur(22px);
-    }
     content: '';
     position: absolute;
     bottom: 0;
@@ -78,7 +97,7 @@
     height: 2px;
     background: var(--accent-gradient-alt);
     transform: translateX(-50%);
-    transition: width var(--transition-base);
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 .nav-link:hover,
@@ -89,6 +108,8 @@
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Mobile Menu Toggle */
