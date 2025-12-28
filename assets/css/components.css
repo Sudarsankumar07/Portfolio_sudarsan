@@ -718,3 +718,18 @@
             margin-top: 120px;
         }
 }
+
+/* Make project links horizontally scrollable on mobile */
+@media (max-width: 600px) {
+  .project-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--spacing-sm);
+    padding-bottom: 4px;
+    margin-bottom: -4px;
+  }
+  .project-links > * {
+    flex: 0 0 auto;
+  }
+}
